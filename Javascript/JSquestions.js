@@ -1,37 +1,44 @@
 // Ques - create a random number from 1-9 if it is below 5 resolve else reject.
 
-var ans = new Promise((res,rej)=>{
-    let num = Math.floor(Math.random()*10)
+// var ans = new Promise((res,rej)=>{
+//     let num = Math.floor(Math.random()*10)
 
-    if(num<=5){
-        return res(num)
-    } else {
-        return rej(num)
-    }
-})
-ans
-.then((num)=>{
-    console.log(`${num},is less than or equal to 5`)
-})
-.catch((num)=>{
-    console.log(`${num}, is greater than 5`)
-})
+//     if(num<=5){
+//         return res(num)
+//     } else {
+//         return rej(num)
+//     }
+// })
+// ans
+// .then((num)=>{
+//     console.log(`${num},is less than or equal to 5`)
+// })
+// .catch((num)=>{
+//     console.log(`${num}, is greater than 5`)
+// })
 
 // create a simple cab booking interface using js callbacks function
 
-function cabbooking(callback){
-    console.log("Cab booking started....")
-    setTimeout(()=>{
-        console.log("Cab Confirmed")
-        console.log("Ride started with Rahul")
-    },3000)
+// function cabbooking(callback){
+//     console.log("Cab booking started....")
+//     setTimeout(()=>{
+//         console.log("Cab Confirmed")
+//         console.log("Ride started with Rahul")
+//         callback()
+//     },3000)
 
+// }
+// cabbooking(()=>{
+//     setTimeout(()=>{
+//         console.log("Ride Completed")
+//         setTimeout(()=>{
+//             console.log("Payment Successfull")
+//         },2000)
+//     },3000)
+// })
+
+// send a OTP to a user, later ask user to enter OTP then verify it's valid or not
+
+function OTP(){
+    let otp= Math.random()
 }
-cabbooking(()=>{
-    setTimeout(()=>{
-        console.log("Ride Completed")
-        setTimeout(()=>{
-            console.log("Payment Successfull")
-        },2000)
-    },3000)
-})
