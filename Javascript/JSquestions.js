@@ -39,6 +39,34 @@
 
 // send a OTP to a user, later ask user to enter OTP then verify it's valid or not
 
-function OTP(){
-    let otp= Math.random()
+
+function randomotp(max,min){
+    return Math.floor(Math.random()*(max+min)-min)
+
 }
+function OTP(){
+    let otp=randomotp(9999,1000) 
+    console.log(otp)
+
+    console.log("OTP Sent")
+
+    const verify = new Promise((res,rej)=>{
+        setTimeout(()=>{
+            let en = parseInt(prompt("Enter OTP"))
+            if (en === otp){
+                return res("OTP Verified")
+            } else{
+                return rej("Invalid OTP")
+            }
+        },3000)
+
+    })
+    return verify
+}
+
+OTP()
+.then((res)=>{
+    console.log(res)
+}).catch((rej)=>{
+    console.log(rej)
+})
