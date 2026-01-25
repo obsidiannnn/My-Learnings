@@ -12,4 +12,7 @@ import (
 func main() {
 	fmt.Println("Hello Go")
 	Math()
+	// We can directly use other go files in main file if
+	// they are in same folder and are of same package
+	variables()
 }
