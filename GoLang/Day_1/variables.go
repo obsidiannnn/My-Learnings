@@ -15,6 +15,34 @@ func variables() {
 	fmt.Println("Name: ", name)
 	fmt.Println("Year: ", year)
 
-	fmt.Printf("Variable is of type: %T", name)
+}
+
+func moreaboutvar() {
+	var name string = "Aditya"
+
+	fmt.Printf("Variable is of type: %T \n", name)
+
+	// fmt.Printf is used to print formatted output
+	// \n is neccesary is Printf as it does not go to next line automatically
+
+	// there are various of these predefined variables that are use in formatted output
+	// %s is for string
+
+	fmt.Printf("Name: %s \n", name)
+
+	// %d is for interger
+	var number int = 34
+	fmt.Printf("Number: %d \n", number)
+
+	// %f is for floating-points
+	// it by default show upto 6 decimal places
+
+	var price float64 = 99.5
+	fmt.Printf("Price %f \n", price)
+
+	//%c is used for writing characters in output
+
+	fmt.Printf("Grade: %c \n", 'A')
+	// in this parameter is wrote in single quotes
 
 }

@@ -18,6 +18,8 @@ func main() {
 	// they are in same folder and are of same package
 
 	variables()
+
+	moreaboutvar()
 }
 
 // Inside a go folder there will be one main.go file
