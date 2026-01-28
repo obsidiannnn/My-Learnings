@@ -1,5 +1,9 @@
 package main
 
+// imports brings external packages into the file that u r working
+// where actually u need it
+
+
 import (
 	"fmt"
 	"math"

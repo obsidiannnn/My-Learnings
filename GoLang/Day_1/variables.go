@@ -15,4 +15,6 @@ func variables() {
 	fmt.Println("Name: ", name)
 	fmt.Println("Year: ", year)
 
+	fmt.Printf("Variable is of type: %T", name)
+
 }
