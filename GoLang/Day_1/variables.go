@@ -45,4 +45,14 @@ func moreaboutvar() {
 	fmt.Printf("Grade: %c \n", 'A')
 	// in this parameter is wrote in single quotes
 
+	// %t is used for bool values.
+	var isloggedin bool = true
+	fmt.Printf("Login: %t \n", isloggedin)
+
+	// %v is used for values that are given is parameters
+	// Safest when you’re not sure about the type.
+
+	fmt.Printf("Anything: %v \n", 42)
+	fmt.Printf("Anything: %v \n", "Hi")
+	fmt.Printf("Anything: %v \n", true)
 }
