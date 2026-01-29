@@ -55,4 +55,11 @@ func moreaboutvar() {
 	fmt.Printf("Anything: %v \n", 42)
 	fmt.Printf("Anything: %v \n", "Hi")
 	fmt.Printf("Anything: %v \n", true)
+
+	// %T is used to identify type of varibale
+
+	fruit := "mango"
+	fmt.Printf("Variable type: %T \n", fruit)
+	
+
 }
