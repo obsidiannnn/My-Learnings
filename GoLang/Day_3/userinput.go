@@ -35,4 +35,7 @@ func input() {
 
 	fmt.Println("Thanks for rating,", input)
 	fmt.Printf("Type of this rating %T \n", input)
+
+	// currently if I am typing anything as user it is stored as string
+
 }
