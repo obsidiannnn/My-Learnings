@@ -6,6 +6,12 @@ import (
 )
 
 func main() {
+	Time()
+	pointers()
+
+}
+
+func Time() {
 	fmt.Println("Time in Go")
 
 	presentTime := time.Now()
@@ -18,5 +24,4 @@ func main() {
 	createdate := time.Date(2020, time.March, 12, 23, 23, 0, 0, time.UTC)
 	fmt.Println(createdate)
 	fmt.Println(createdate.Format("01-02-2006 Monday"))
-
 }
