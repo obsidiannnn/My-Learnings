@@ -39,4 +39,12 @@ func maps() {
 		fmt.Printf("For Key %v, value is %v", key, value)
 	}
 
+	// %v is for value
+
+	// with comma ok syntax:
+
+	for _, value := range lang {
+		fmt.Printf("For Key v, value is %v \n", value)
+	}
+
 }
