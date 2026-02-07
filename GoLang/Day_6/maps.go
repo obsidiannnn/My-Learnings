@@ -30,4 +30,7 @@ func maps() {
 
 	delete(lang, "RB")
 	fmt.Println(lang)
+
+	// loops in maps:
+
 }
