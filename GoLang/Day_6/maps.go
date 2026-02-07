@@ -33,4 +33,10 @@ func maps() {
 
 	// loops in maps:
 
+	// method to write for loop for map
+
+	for key, value := range lang {
+		fmt.Printf("For Key %v, value is %v", key, value)
+	}
+
 }
