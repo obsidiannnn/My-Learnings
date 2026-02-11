@@ -5,7 +5,25 @@ import (
 )
 
 func main() {
-	maps()
+
+	//maps()
+
+	Struct()
+
+	Aditya := User{"Aditya",
+		"Adi@email.com",
+		true,
+		19,
+	}
+
+	fmt.Println(Aditya)
+
+	fmt.Printf("Details of Aditya are %+v \n", Aditya)
+	// %v is used for value with printf but %+V is used for detailing
+
+	// to access particular values:
+
+	fmt.Printf("Name is %v and email is %v", Aditya.Name, Aditya.Email)
 }
 
 func maps() {
