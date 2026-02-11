@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	//maps()
+	maps()
 
 	Struct()
 
