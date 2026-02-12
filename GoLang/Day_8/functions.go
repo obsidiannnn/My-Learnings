@@ -1,18 +1,25 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
+
 	fmt.Println("Functions in GO")
 
 	result := adder(24324, 56336)
 	fmt.Println(result)
 
-	proresult := proadder(2, 3, 4, 5, 6,345,47,346,547,3254,6,8,546,46)
+	proresult := proadder(2, 3, 4, 5, 6, 345, 47, 346, 547, 3254, 6, 8, 546, 46)
 	fmt.Printf("Pro result is %v \n", proresult)
 
+	Aditya := User{
+		"Aditya",
+		"adi@email.com",
+		true,
+		19,
+	}
+	Aditya.GetStatus()
+	Aditya.Newmail()
 }
 
 // taking parameters in a func
