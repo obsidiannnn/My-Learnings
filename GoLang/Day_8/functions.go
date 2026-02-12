@@ -20,6 +20,8 @@ func main() {
 	}
 	Aditya.GetStatus()
 	Aditya.Newmail()
+
+	def()
 }
 
 // taking parameters in a func
