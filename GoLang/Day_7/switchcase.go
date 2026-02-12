@@ -10,6 +10,11 @@ func switchcase() {
 	fmt.Println("switch case in golang")
 
 	rand.Seed(time.Now().UnixNano())
+
+	// without a seed go doesn't really really generate random numbers
+	// they have a certain sequences or order that repeats.
+	// that's why we use seed to get a random number at every run
+	
 	dicenum := rand.Intn(6) + 1
 
 	// for rolling a die we need six digit but with random
@@ -29,7 +34,7 @@ func switchcase() {
 		// fall through means with case 3 occurs run the case
 		// just after 3 too that means case will also run
 		// note only just after case will run in fallthrough
-		
+
 	case 4:
 		fmt.Println("Move ahead by 4 spots")
 	case 5:

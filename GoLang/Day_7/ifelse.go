@@ -7,6 +7,7 @@ import (
 func main(){
 	ifelse()
 	switchcase()
+	loops()
 }
 
 func ifelse(){
