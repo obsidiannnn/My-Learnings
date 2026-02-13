@@ -46,6 +46,21 @@ func file(){
 
 // creating a func to read file
 
-func readfile(){
+func readfile(filename string){
+	databyte, err := os.ReadFile(filename)
 	
+	// while reading from a file locally or from network it is always
+	// read in byte format to convert it into string we use ioutil.
+	if err != nil {
+		panic(err)
+	}
+
+	// fmt.Println("Text data inside the file is: \n", databyte)
+
+	// this will give us data in byte format as we didn't converted it
+	
+	fmt.Println("Text inside this file is: \n", string(databyte))
+
+	// this will give us data is usual string format
+
 }

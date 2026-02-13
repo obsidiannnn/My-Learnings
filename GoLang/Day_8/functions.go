@@ -22,6 +22,9 @@ func main() {
 	Aditya.Newmail()
 
 	def()
+
+	file()
+	readfile("./newfile.txt")
 }
 
 // taking parameters in a func
