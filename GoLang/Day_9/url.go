@@ -21,10 +21,21 @@ func urll(){
 	}
 
 	fmt.Println("Scheme is: ", result.Scheme)
-	fmt.Println("Host is: ", result.Host)
-	fmt.Println("Path is: ", result.Path)
-	fmt.Println("Port is: ", result.Port())
-	fmt.Println("Query is: ", result.Query())
-	fmt.Println("Raw Query is: ", result.RawQuery)
+	// output https
 
+	fmt.Println("Host is: ", result.Host)
+	// output demourl:3000
+
+	fmt.Println("Path is: ", result.Path)
+	// output /learn
+	fmt.Println("Port is: ", result.Port())
+	// output 3000, port is not a query it is a method to get port from url
+
+	fmt.Println("Query is: ", result.Query())
+	// output map[coursename:[golang] paymentid:[ghbj456ghb]]
+	
+	fmt.Println("Raw Query is: ", result.RawQuery)
+	// output coursename=golang&paymentid=ghbj456ghb
+
+	// to get value of a particular query parameter
 }
