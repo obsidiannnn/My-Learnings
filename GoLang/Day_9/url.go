@@ -33,9 +33,20 @@ func urll(){
 
 	fmt.Println("Query is: ", result.Query())
 	// output map[coursename:[golang] paymentid:[ghbj456ghb]]
-	
+
 	fmt.Println("Raw Query is: ", result.RawQuery)
 	// output coursename=golang&paymentid=ghbj456ghb
 
 	// to get value of a particular query parameter
+
+	querys := result.Query()
+
+	// stores all the quesries
+	// this gives us a map as they are stored in key and values format
+
+	fmt.Println(querys)
+
+	// accessing by keys
+
+	fmt.Println("Accessing value from query by keys for coursename: ",querys["coursename"])
 }
