@@ -49,4 +49,13 @@ func urll(){
 	// accessing by keys
 
 	fmt.Println("Accessing value from query by keys for coursename: ",querys["coursename"])
+
+	// accessing all parametes from query using for loop via keys values pair
+
+	for _, val := range querys {
+		if err != nil {
+			panic((err))
+		}
+		fmt.Println("Parameters are : ",val)
+	}
 }
