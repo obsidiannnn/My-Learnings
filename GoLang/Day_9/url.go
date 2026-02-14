@@ -53,9 +53,21 @@ func urll(){
 	// accessing all parametes from query using for loop via keys values pair
 
 	for _, val := range querys {
-		if err != nil {
-			panic((err))
-		}
 		fmt.Println("Parameters are : ",val)
 	}
+
+	// building url from scratch
+	// we always pass reference of url struct to build url not copy
+	
+	partsofurl := &url.URL{
+		Scheme: "https",
+		Host: "anotherurl.com",
+		Path: "/tutcss",
+		RawPath: "user=aditya",
+	}
+
+	anotherurl := partsofurl.String()
+	fmt.Println("Another url is: ", anotherurl)
+
+
 }
