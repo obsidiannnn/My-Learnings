@@ -1,51 +1,46 @@
 package main
 
-import (
-	"fmt"
-	"io"
-	"net/http"
-)
-
-const url = "https://jsonplaceholder.typicode.com/posts"
+// const url = "https://jsonplaceholder.typicode.com/posts"
 
 func main() {
-	fmt.Println("Web Request")
 
-	response, err := http.Get(url)
+	urll()
 
-	if err != nil{
-		panic(err)
-	}
+	// fmt.Println("Web Request")
 
-	fmt.Printf("Response is of type: %T \n", response)
+	// response, err := http.Get(url)
 
-	// ans is response is of type  *http.Response
-	// * means reponse is in pntr format that is we are not getting copy of 
-	// reponse but actual data.
+	// if err != nil{
+	// 	panic(err)
+	// }
 
-	defer response.Body.Close()
+	// fmt.Printf("Response is of type: %T \n", response)
 
-	// using get or post or reading or writing never closes the request
+	// // ans is response is of type  *http.Response
+	// // * means reponse is in pntr format that is we are not getting copy of
+	// // reponse but actual data.
 
-	// it is import to close it at the end
+	// defer response.Body.Close()
 
-	// reading the response
+	// // using get or post or reading or writing never closes the request
 
-	databyte, err := io.ReadAll(response.Body)
+	// // it is import to close it at the end
 
-	// databyte again will give data in bytes to we have to convert it into string.
+	// // reading the response
 
-	if err != nil {
-		panic(err)
+	// databyte, err := io.ReadAll(response.Body)
 
-	}
+	// // databyte again will give data in bytes to we have to convert it into string.
 
-	content := string(databyte)
-	fmt.Println("Data inside response if : \n", content)
+	// if err != nil {
+	// 	panic(err)
 
-	// good practise if convert data into string store in varibale 
-	// then print , do not directly conver into print statement.
-	
+	// }
+
+	// content := string(databyte)
+	// fmt.Println("Data inside response if : \n", content)
+
+	// // good practise if convert data into string store in varibale
+	// // then print , do not directly conver into print statement.
+
 }
-
-
