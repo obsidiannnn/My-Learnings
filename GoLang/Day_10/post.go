@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"strings"
 )
 
@@ -20,5 +21,14 @@ func post() {
 		}
 	`)
 
-	res, err = http.POST(urll, "application/json", requestBody)
+	res, err := http.Post(urll, "application/json", requestBody)
+
+	if err != nil {
+		panic(err)
+	}
+	defer res.Body.Close()
+
+	
+
+
 }
