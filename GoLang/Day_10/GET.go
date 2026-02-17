@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net/http"
 )
 
@@ -26,6 +27,13 @@ func getrequest() {
 	// close them at last.
 
 	fmt.Println("Status code: ", res.Status)
-	fmt.Println("Content length is: ",res.ContentLength)
+	fmt.Println("Content length is: ", res.ContentLength)
 
+	content, err := io.ReadAll(res.Body)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Content of response is: ", string(content))
 }
