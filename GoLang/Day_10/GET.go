@@ -36,4 +36,10 @@ func getrequest() {
 	}
 
 	fmt.Println("Content of response is: ", string(content))
+
+	// content is in byte format to we use string to make it readable
+
+	
+
+	
 }
