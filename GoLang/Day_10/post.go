@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net/http"
 	"strings"
 )
@@ -28,7 +29,13 @@ func post() {
 	}
 	defer res.Body.Close()
 
-	
+	content, err := io.ReadAll(res.Body)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println("response after posting data is: ", string(content))
 
 
 }
