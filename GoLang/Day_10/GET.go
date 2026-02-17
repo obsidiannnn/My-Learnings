@@ -26,5 +26,6 @@ func getrequest() {
 	// close them at last.
 
 	fmt.Println("Status code: ", res.Status)
+	fmt.Println("Content length is: ",res.ContentLength)
 
 }
