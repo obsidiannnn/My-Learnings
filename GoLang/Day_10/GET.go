@@ -9,7 +9,9 @@ import (
 func main() {
 	fmt.Println("GET request in GO")
 
-	getrequest()
+	//getrequest()
+
+	post()
 }
 
 func getrequest() {
@@ -39,7 +41,7 @@ func getrequest() {
 
 	// content is in byte format to we use string to make it readable
 
-	
+
 
 	
 }
