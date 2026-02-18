@@ -9,9 +9,11 @@ import (
 func main() {
 	fmt.Println("GET request in GO")
 
-	getrequest()
+	// getrequest()
 
-	post()
+	// post()
+
+	formrequest()
 }
 
 func getrequest() {
