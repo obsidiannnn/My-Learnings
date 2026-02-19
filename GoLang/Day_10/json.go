@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"encoding/json"
 )
 
 // course starting with small c means we are not using it outside
@@ -13,8 +14,30 @@ type course struct {
 	Platform string
 	Password string
 	Tags     []string
+
+	// tag will be a slice of string and it will 
+	// hold multiple tags for the course
 }
 
-func Json() {
-	fmt.Println("Json data in go")
+func Encodingjson() {
+	// mycourse is a slice of course struct and it is empty for now 
+	// and we will add some data to it later.
+	mycourse := []course{
+		{"ReactJS", 0, "online", "abc123", []string{"web-dev", "frontend"}},
+		{"GoLang", 0, "online", "def456", []string{"web-dev", "backend"}},
+		{"Python", 0, "online", "ghi789", nil},
+
+
+	}
+
+	// package this data as json data and send it to client
+
+	// json data is a format that is used to send data over the internet
+
+	finaljson, _ := json.Marshal(mycourse)
+
+	// json.Marshal is used to convert the data into json format 
+	// and it returns the json data in byte format and error if any.
+
+	fmt.Printf("final json is %s\n", string(finaljson))
 }

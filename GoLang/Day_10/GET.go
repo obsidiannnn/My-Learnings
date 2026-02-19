@@ -13,7 +13,9 @@ func main() {
 
 	// post()
 
-	formrequest()
+	// formrequest()
+
+	Encodingjson()
 }
 
 func getrequest() {
