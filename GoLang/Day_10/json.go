@@ -34,7 +34,16 @@ func Encodingjson() {
 
 	// json data is a format that is used to send data over the internet
 
-	finaljson, err := json.Marshal(mycourse)
+	//finaljson, err := json.Marshal(mycourse)
+
+	// while using json.Marshal it will return data in clustered format
+	// and to make it more readable we can use json.MarshalIndent
+
+	finaljson, err := json.MarshalIndent(mycourse, "", "\t")
+
+	// here "" means we don't want any prefix and "\t" means we
+	// want to use tab for indentation and it will make data more readabl.
+	// /
 
 	if err != nil {
 		panic(err)
