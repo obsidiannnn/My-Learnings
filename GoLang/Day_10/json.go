@@ -34,7 +34,11 @@ func Encodingjson() {
 
 	// json data is a format that is used to send data over the internet
 
-	finaljson, _ := json.Marshal(mycourse)
+	finaljson, err := json.Marshal(mycourse)
+
+	if err != nil {
+		panic(err)
+	}
 
 	// json.Marshal is used to convert the data into json format 
 	// and it returns the json data in byte format and error if any.
