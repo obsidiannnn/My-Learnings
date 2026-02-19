@@ -10,6 +10,7 @@ import (
 
 // structs are often used to represent data in jsson format
 // and we can use json tags to specify the json key for each field in the struct
+
 type course struct {
 	Name string `json:"Coursename"` // it will replace field name with coursename
 	// all over the data and it will be used as key in json data instead of Name
@@ -18,7 +19,7 @@ type course struct {
 	Platform string `json:"website"`
 	Password string `json:"-"` // after putting dash it will not be
 	// included in json data and it will be ignored while encoding
-	Tags []string `json: "tags,omitemty"` // after putting omitempty
+	Tags []string `json:"tags,omitempty"` // after putting omitempty
 	// if the value of tags is empty then it will not be included in json data
 
 	// and it will return null as output.
