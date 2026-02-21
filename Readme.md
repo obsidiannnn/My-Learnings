@@ -15,6 +15,10 @@ What I’m Learning currently: 🚀
 
 ~ React.js ⚛️
 
+~ Docker
+
+~ Kubernets
+
 ---
 
 How I Use This Repo 
