@@ -4,6 +4,20 @@ import (
 	"fmt"
 )
 
+type course struct {
+	Name string `json:"Coursename"` // it will replace field name with coursename
+	// all over the data and it will be used as key in json data instead of Name
+
+	Price    int
+	Platform string `json:"website"`
+	Password string `json:"-"` // after putting dash it will not be
+	// included in json data and it will be ignored while encoding
+	Tags []string `json:"tags,omitempty"` // after putting omitempty
+	// if the value of tags is empty then it will not be included in json data
+
+	// and it will return null as output.
+}
+
 func DecodeJson() {
 	fmt.Println("Decodind json data")
 
@@ -27,4 +41,13 @@ func DecodeJson() {
 		}
 	
 	`)
+
+	var mycourse course
+
+	// json data that is coming from has to be stored in some
+	// variable and that variable should be of type course struct
+
+	// we can check wheather our data is in correct format or not
+	// by using json.Valid function
+
 }
