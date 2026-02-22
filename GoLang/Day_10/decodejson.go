@@ -1,7 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+
+	"gopkg.in/check.v1"
 )
 
 type course struct {
@@ -50,4 +53,10 @@ func DecodeJson() {
 	// we can check wheather our data is in correct format or not
 	// by using json.Valid function
 
+	checkValid := json.Valid(jsondata)
+
+	if !checkValid {
+		fmt.Println("json data is not valid")
+		json.Unmarshal()
+	}
 }
