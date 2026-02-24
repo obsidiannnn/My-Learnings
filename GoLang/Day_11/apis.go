@@ -34,6 +34,10 @@ func (c *Course) IsEmpty() bool {
 	return c.CourseId == "" && c.Coursename == ""
 }
 
+// *Course is used to take actual data and check for both the fields if both are 
+//* empty then we get true and we will not procced further.
+
+
 var courses []Course
 
 
