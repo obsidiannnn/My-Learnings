@@ -28,6 +28,11 @@ type Author struct {
 // it will be a slice of type course
 
 // if courseid is not avaliable we will not move further.
+// to check this we use middleware or heloer - file
+
+func (c *Course) IsEmpty() bool {
+	return c.CourseId == "" && c.Coursename == ""
+}
 
 var courses []Course
 
