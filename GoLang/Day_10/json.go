@@ -11,7 +11,7 @@ import (
 // structs are often used to represent data in jsson format
 // and we can use json tags to specify the json key for each field in the struct
 
-type course struct {
+type Course struct {
 	Name string `json:"Coursename"` // it will replace field name with coursename
 	// all over the data and it will be used as key in json data instead of Name
 
