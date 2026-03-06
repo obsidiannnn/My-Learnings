@@ -4,9 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"gopkg.in/check.v1"
 )
-
 type course struct {
 	Name string `json:"Coursename"` // it will replace field name with coursename
 	// all over the data and it will be used as key in json data instead of Name
@@ -42,6 +40,12 @@ func DecodeJson() {
 			"Website": "HelloWorld.com",
 			"tags": ["web-dev","go"]
 		}
+		{
+			"coursename": "Python Bootcamp",
+			"Price" : 199,
+			"Website": "HelloWorld.com",
+			"tags": null
+		}
 	
 	`)
 
@@ -55,8 +59,10 @@ func DecodeJson() {
 
 	checkValid := json.Valid(jsondata)
 
-	if !checkValid {
-		fmt.Println("json data is not valid")
-		json.Unmarshal()
+	if checkValid {
+		fmt.Println("json data isvalid")
+		json.Unmarshal(jsondata, &mycourse)
+		fmt.Println("")
+
 	}
 }
