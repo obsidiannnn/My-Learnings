@@ -28,10 +28,22 @@ print(count)
 
 # Recursion
 
+# Tail Recursion
+
 def printrev(n):
-    if n <= 0:
+    if n <= 0: # base condition
         return
-    print(n)
-    printrev(n-1)
+    print(n) # execution statement
+    printrev(n-1) # recursive call
 
 printrev(20)
+
+# Head Recursion
+
+def printrev(n):
+    if n <= 0: # base condition
+        return
+    printrev(n-1) # recursive call
+    print(n) 
+
+printrev(20) 
