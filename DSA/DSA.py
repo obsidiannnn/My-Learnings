@@ -26,4 +26,12 @@ for i in range(len(arr)):
 print(count)
 
 
+# Recursion
 
+def printrev(n):
+    if n <= 0:
+        return
+    print(n)
+    printrev(n-1)
+
+printrev(20)
