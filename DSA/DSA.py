@@ -38,7 +38,7 @@ def printrev(n):
 
 printrev(20)
 
-# Head Recursion
+# Head Recursion - reverse order of execution
 
 def printrev(n):
     if n <= 0: # base condition
