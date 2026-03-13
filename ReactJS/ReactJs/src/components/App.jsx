@@ -7,6 +7,10 @@ export default function App(){
 export function Pst(){
     return <h2>PST Components</h2>
 }
-export function getadvice() {
-    
+export async function getadvice() {
+    const res = await fetch('https://api.adviceslip.com/advice')
+    const data = await res.json()
+    return data.slip.advice
+
+
 }
