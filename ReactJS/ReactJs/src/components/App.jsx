@@ -14,3 +14,7 @@ export async function getadvice() {
 
 
 }
+
+function button(props) {
+    <button onClick={props.getadvice}></button>
+}
