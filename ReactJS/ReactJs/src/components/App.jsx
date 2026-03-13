@@ -7,3 +7,6 @@ export default function App(){
 export function Pst(){
     return <h2>PST Components</h2>
 }
+export function getadvice() {
+    
+}
