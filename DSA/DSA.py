@@ -67,5 +67,32 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)  
 print(fibonacci(10))
 
+# Merge Sort using recursion
+# Divide and Conquer Algorithm
+
+arr = [6,8,1,2,5,4,3,0]
 
 
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+def merge(left, right):
+    merged = []
+    i, j = 0, 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            merged.append(left[i])
+            i += 1
+        else:
+            merged.append(right[j])
+            j += 1
+    merged.extend(left[i:])
+    merged.extend(right[j:])
+    return merged
+
+print(merge_sort(arr))
