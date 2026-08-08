@@ -9,19 +9,25 @@ I add code, small examples, and notes as I explore new technologies and concepts
 
 What I’m Learning currently: 🚀
 
-~ Golang 
+~ Golang
 
-~ JavaScript 
+~ JavaScript
 
-~ React.js ⚛️
+~ React.js
 
 ~ Docker
 
 ~ Kubernets
 
+~ Rust
+
+~ C++
+
+~ DSA
+
 ---
 
-How I Use This Repo 
+How I Use This Repo
 ~ Learn something
 ~ Write code for it
 ~ Push changes to GitHub
